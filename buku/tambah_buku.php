@@ -28,7 +28,7 @@
 						<tr>
 							<td>Nama</td>
 							<td>:</td>
-							<td><input type="tex" name="nama" placeholder="nama"></td>
+							<td><input type="text" name="nama" placeholder="nama"></td>
 						</tr>
 						<tr>
 							<td>Tahun Terbit</td>
@@ -38,42 +38,42 @@
 						<tr>
 							<td>Penulis</td>
 							<td></td>
-							<td><int type="int" name="id_penulis" placeholder="penulis"></td>
-							</tr>
-							<tr>
-								<td>Penerbit</td>
+							<td><int type="text" name="id_penulis" placeholder="penulis"></td>
+						</tr>
+						<tr>
+							<td>Penerbit</td>
 								<td></td>
-								<td><int type="int" name="id_penerbit" placeholder="penerbit"></td>
-								</tr>
-								<tr>
-									<td>Kategori</td>
+								<td><int type="text" name="id_penerbit" placeholder="penerbit"></td>
+						</tr>
+						<tr>
+							<td>Kategori</td>
 									<td></td>
-									<td><input type="int" name="id_kategori" placeholder="kategori"></td>
-								</tr>
-								<tr>
-									<td>Sinopsis</td>
-									<td></td>
-									<td><input type="text" name="sinopsis" placeholder="sinopsis"></td>
-								</tr>
-								<tr>
-									<td>Sampul</td>
-									<td></td>
-									<td><input type="varchar" name="sampul" placeholder="sampul"></td>
-								</tr>
-								<tr>
-									<td>Berkas</td>
-									<td></td>
-									<td><input type="varchar" name="berkas" placeholder="berkas"></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td><input type="submit" name="simpan" value="simpan"></td>
-								</tr>
-							</table>
-						</form>
-					</td>
-				</tr>
-			</table>
-		</body>
-		</html>
+									<td><input type="text" name="id_kategori" placeholder="kategori"></td>
+						</tr>
+						<tr>
+							<td>Sinopsis</td>
+							<td></td>
+							<td><input type="text" name="sinopsis" placeholder="sinopsis"></td>
+						</tr>
+						<tr>
+							<td>Sampul</td>
+							<td></td>
+							<td><input type="image" name="sampul" placeholder="sampul"></td>
+						</tr>
+						<tr>
+							<td>Berkas</td>
+							<td></td>
+							<td><input type="DOCTYPE" name="berkas" placeholder="berkas"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td><input type="submit" name="simpan" value="simpan"></td>
+						</tr>
+					</table>
+				</form>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

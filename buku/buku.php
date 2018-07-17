@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 </head>
@@ -65,7 +65,7 @@
 			</tr>
 			<?php  $no++; }?>
 		</tbody>
-		<table>
+		</table>
 		</td>
 	</td>
 </tr>

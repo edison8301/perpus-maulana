@@ -21,7 +21,6 @@
 					<li><a href="user/user.php">User</a></li>
 					<li><a href="user_role/user_role.php">User Role</a></li>
 				</ul>
-
 			</td>
 			<td width="700" align="center">Selamat Datang Di Sistem Perpustakaan
 			</td>

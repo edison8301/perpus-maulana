@@ -15,7 +15,7 @@
 					<li><a href="../kategori/kategoti.php">Kategori</a></li>
 					<li><a href="../peminjaman/peminjaman.php">Peminjaman</a></li>
 					<li><a href="../penerbit/penerbit.php">Penerbit</a></li>
-					<li><a href="../penulis/penulis.php">Penulis</a></li>
+					<li><a href="../penulis/penulis.php">Penulis</a></li> 
 					<li><a href="../petugas/petugas.php">Petugas</a></li>
 					<li><a href="../user/user.php">User</a></li>
 					<li><a href="../user_role/user_role.php">User Role</a></li>

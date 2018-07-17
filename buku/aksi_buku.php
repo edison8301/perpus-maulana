@@ -13,8 +13,9 @@ include '../koneksi.php';
 	$berkas = $_POST['berkas'];
 
 // menginput data ke database
-	mysqli_query($koneksi,"insert into buku  values('',$nama','$tahun_terbit','$id_penulis','$id_penerbit','$id_kategori','$sinopsis','$sampul','$berkas')");
-
+	mysqli_query($koneksi,"insert into buku values('',$nama','$tahun_terbit','$id_penulis','$id_penerbit','$id_kategori','$sinopsis','$sampul','$berkas')");
+	
+// mengalihkan halaman kembali ke index.php
 	header("location:buku.php");
 
 	if ($query) {

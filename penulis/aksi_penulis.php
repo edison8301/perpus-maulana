@@ -14,4 +14,11 @@ mysqli_query($koneksi,"insert into penulis values('','$nama','$alamat','$telepon
 // mengalihkan halaman kembali ke index.php
 header("location:penulis.php");
 
+if ($query) {
+	echo "<script>alert('Data Berhasil di Simpan');
+	document.location.href='penulis.php'</script>\n";
+} else {
+	echo "<script>alert('Data Gagal di Simpan');
+	document.location.href='tambah_penulis.php'</script>\n";
+}
 ?>
