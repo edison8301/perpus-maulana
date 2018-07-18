@@ -24,7 +24,7 @@
 			</ul>
 		</td>
 		<td width="500">
-			<ul><a href="tambah_anggota.php"> +Tambah Anggota</a>
+			<ul><a href="user.php"> +Tambah User</a>
 			</ul>
 			<table border="1">
 				<thead>
@@ -42,19 +42,20 @@
 		<?php 
 		include '../koneksi.php';
 		$no = 1;
-		$data = mysqli_query($koneksi,"select * from anggota");
+		$data = mysqli_query($koneksi,"select * from user");
 		while($d = mysqli_fetch_array($data)){
 			?>
 			<tr class="odd gradex">
 				<td><?php echo $no++; ?></td>
-				<td><?php echo $d['nama']; ?></td>
-				<td><?php echo $d['alamat']; ?></td>
-				<td><?php echo $d['telepon']; ?></td>
-				<td><?php echo $d['email']; ?></td>
-				<td><?php echo $d['status_aktif']; ?></td>
+				<td><?php echo $d['username']; ?></td>
+				<td><?php echo $d['password']; ?></td>
+				<td><?php echo $d['id_anggota']; ?></td>
+				<td><?php echo $d['id_petugas']; ?></td>
+				<td><?php echo $d['id_user_role']; ?></td>
+				<td><?php echo $d['status']; ?></td>
 				<td>
-					<a href="edit_anggota.php?id=<?php echo $d['id']; ?>">EDIT</a>
-					<a href="hapus_anggota.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+					<a href="edit_user.php?id=<?php echo $d['id']; ?>">EDIT</a>
+					<a href="hapus_user.php?id=<?php echo $d['id']; ?>">HAPUS</a>
 				</td>
 			</tr>
 			<?php $no++; }?>

@@ -2,7 +2,7 @@
 <html>
 <head>
 </head>
-<body>
+<body> 
 	<table width="700" border="1">
 		<tr>
 			<td colspan="2" align="center"><h1>Selamat Datang di Sistem Informasi Perpustakaan</h1></td>
@@ -12,7 +12,7 @@
 				<ul>
 					<li><a href="../anggota/anggota.php">Anggota</a></li>
 					<li><a href="../buku/buku.php">Buku</a></li>
-					<li><a href="../kategori/kategoti.php">Kategori</a></li>
+					<li><a href="../kategori/kategori.php">Kategori</a></li>
 					<li><a href="../peminjaman/peminjaman.php">Peminjaman</a></li>
 					<li><a href="../penerbit/penerbit.php">Penerbit</a></li>
 					<li><a href="../penulis/penulis.php">Penulis</a></li>

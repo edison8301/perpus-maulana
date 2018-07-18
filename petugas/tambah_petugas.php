@@ -13,7 +13,7 @@
 				<ul>
 					<li><a href="../anggota/anggota.php">Anggota</a></li>
 					<li><a href="../buku/buku.php">Buku</a></li>
-					<li><a href="../kategori/kategoti.php">Kategori</a></li>
+					<li><a href="../kategori/kategori.php">Kategori</a></li>
 					<li><a href="../peminjaman/peminjaman.php">Peminjaman</a></li>
 					<li><a href="../penerbit/penerbit.php">Penerbit</a></li>
 					<li><a href="../penulis/penulis.php">Penulis</a></li>
@@ -28,22 +28,22 @@
 					<tr>
 						<td>Nama</td>
 						<td>:</td>
-						<td><input type="text" name="nama" placeholder="nama"></td>
+						<td><input type="varchar" name="nama" placeholder="nama"></td>
 					</tr>
 					<tr>
 						<td>Alamat</td>
 						<td>:</td>
-						<td><input type="text" name="alamat" placeholder="alamat"></td>
+						<td><input type="varchar" name="alamat" placeholder="alamat"></td>
 					</tr>	
 					<tr>
 						<td>Telepon</td>
 						<td>:</td>
-						<td><input type="text" name="telepon" placeholder="telepon"></td>
+						<td><input type="varchar" name="telepon" placeholder="telepon"></td>
 					</tr>	
 					<tr>
 						<td>Email</td>
 						<td>:</td>
-						<td><input type="text" name="email" placeholder="email"></td>
+						<td><input type="varchar" name="email" placeholder="email"></td>
 					</tr>	
 					<tr>
 						<td></td>

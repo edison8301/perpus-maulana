@@ -13,7 +13,7 @@
 				<ul>
 					<li><a href="../anggota/anggota.php">Anggota</a></li>
 					<li><a href="../buku/buku.php">Buku</a></li>
-					<li><a href="../kategori/kategoti.php">Kategori</a></li>
+					<li><a href="../kategori/kategori.php">Kategori</a></li>
 					<li><a href="../peminjaman/peminjaman.php">Peminjaman</a></li>
 					<li><a href="../penerbit/penerbit.php">Penerbit</a></li>
 					<li><a href="../penulis/penulis.php">Penulis</a></li>
@@ -28,7 +28,10 @@
 						<tr>
 							<td>Nama</td>
 							<td>:</td>
-							<td><input type="text" name="nama" placeholder="nama"></td>
+							<td>
+								<input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+								<input type="varchar" name="nama" placeholder="nama">
+							</td>
 						</tr>
 						<tr>
 							<td>Tahun Terbit</td>
@@ -38,17 +41,17 @@
 						<tr>
 							<td>Penulis</td>
 							<td></td>
-							<td><int type="text" name="id_penulis" placeholder="penulis"></td>
+							<td><int type="int" name="id_penulis" placeholder="penulis"></td>
 						</tr>
 						<tr>
 							<td>Penerbit</td>
 								<td></td>
-								<td><int type="text" name="id_penerbit" placeholder="penerbit"></td>
+								<td><int type="int" name="id_penerbit" placeholder="penerbit"></td>
 						</tr>
 						<tr>
 							<td>Kategori</td>
 									<td></td>
-									<td><input type="text" name="id_kategori" placeholder="kategori"></td>
+									<td><input type="int" name="id_kategori" placeholder="kategori"></td>
 						</tr>
 						<tr>
 							<td>Sinopsis</td>
@@ -58,12 +61,12 @@
 						<tr>
 							<td>Sampul</td>
 							<td></td>
-							<td><input type="image" name="sampul" placeholder="sampul"></td>
+							<td><input type="varchar" name="sampul" placeholder="sampul"></td>
 						</tr>
 						<tr>
 							<td>Berkas</td>
 							<td></td>
-							<td><input type="DOCTYPE" name="berkas" placeholder="berkas"></td>
+							<td><input type="varchar" name="berkas" placeholder="berkas"></td>
 						</tr>
 						<tr>
 							<td></td>

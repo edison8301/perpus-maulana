@@ -15,35 +15,20 @@
 					<li><a href="../kategori/kategori.php">Kategori</a></li>
 					<li><a href="../peminjaman/peminjaman.php">Peminjaman</a></li>
 					<li><a href="../penerbit/penerbit.php">Penerbit</a></li>
-					<li><a href="../penulis/penulis.php">Penulis</a></li>
+					<li><a href="../penulis/penulis.php">Penulis</a></li> 
 					<li><a href="../petugas/petugas.php">Petugas</a></li>
 					<li><a href="../user/user.php">User</a></li>
 					<li><a href="../user_role/user_role.php">User Role</a></li>
 				</ul>
 			</td>
-
 			<td width="500">
-				<form method="post" action="aksi_penulis.php">
+				<form method="post" action="aksi_kategori.php">
 					<table border="0">
 					<tr>
 						<td>Nama</td>
 						<td>:</td>
+						<td><input type="hidden" name="id" value="<?php echo $d['id']; ?>"></td>
 						<td><input type="varchar" name="nama" placeholder="nama"></td>
-					</tr>
-					<tr>
-						<td>Alamat</td>
-						<td>:</td>
-						<td><input type="text" name="alamat" placeholder="alamat"></td>
-					</tr>	
-					<tr>
-						<td>Telepon</td>
-						<td>:</td>
-						<td><input type="varchar" name="telepon" placeholder="telepon"></td>
-					</tr>	
-					<tr>
-						<td>Email</td>
-						<td>:</td>
-						<td><input type="varchar" name="email" placeholder="email"></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -52,9 +37,8 @@
 					</tr>
 				</table>
 			</form>
-			</td>
-	<tr><td colspan="2" align="center">maulana blajar</td></tr>
-</tr>
+		</td>
+	</tr>
 </table>
 </body>
 </html>

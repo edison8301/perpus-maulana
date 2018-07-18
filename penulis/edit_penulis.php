@@ -12,7 +12,7 @@
 				<ul>
 					<li><a href="../anggota/anggota.php">Anggota</a></li>
 					<li><a href="../buku/buku.php">Buku</a></li>
-					<li><a href="../kategori/kategoti.php">Kategori</a></li>
+					<li><a href="../kategori/kategori.php">Kategori</a></li>
 					<li><a href="../peminjaman/peminjaman.php">Peminjaman</a></li>
 					<li><a href="../penerbit/penerbit.php">Penerbit</a></li>
 					<li><a href="../penulis/penulis.php">Penulis</a></li>
@@ -36,20 +36,20 @@
 					<td>Nama</td>
 					<td>
 						<input type="hidden" name="id" value="<?php echo $d['id']; ?>">
-						<input type="varcar" name="nama" value="<?php echo $d['nama']; ?>">
+						<input type="varchar" name="nama" value="<?php echo $d['nama']; ?>">
 					</td>
 				</tr>
 				<tr>
 					<td>Alamat</td>
-					<td><input type="varcar" name="alamat" value="<?php echo $d['alamat']; ?>"></td>
+					<td><input type="text" name="alamat" value="<?php echo $d['alamat']; ?>"></td>
 				</tr>
 				<tr>
 					<td>Telepon</td>
-					<td><input type="varcar" name="telepon" value="<?php echo $d['telepon']; ?>"></td>
+					<td><input type="varchar" name="telepon" value="<?php echo $d['telepon']; ?>"></td>
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="varcar" name="email" value="<?php echo $d['email']; ?>"></td>
+					<td><input type="varchar" name="email" value="<?php echo $d['email']; ?>"></td>
 				</tr>
 				<tr>
 					<td></td>

@@ -12,7 +12,7 @@
 				<ul>
 					<li><a href="../anggota/anggota.php">Anggota</a></li>
 					<li><a href="../buku/buku.php">Buku</a></li>
-					<li><a href="../kategori/kategoti.php">Kategori</a></li>
+					<li><a href="../kategori/kategori.php">Kategori</a></li>
 					<li><a href="../peminjaman/peminjaman.php">Peminjaman</a></li>
 					<li><a href="../penerbit/penerbit.php">Penerbit</a></li>
 					<li><a href="../penulis/penulis.php">Penulis</a></li> 
@@ -27,22 +27,22 @@
 						<tr>
 							<td>Buku</td>
 						<td>:</td>
-						<td><input type="text" name="id_buku" placeholder="id_buku"></td>
+						<td><input type="int" name="id_buku" placeholder="id_buku"></td>
 					</tr>
 					<tr>
 						<td>Anggota</td>
 						<td>:</td>
-						<td><input type="text" name="id_anggota" placeholder="id_anggota"></td>
+						<td><input type="int" name="id_anggota" placeholder="id_anggota"></td>
 					</tr>	
 					<tr>
 						<td>Tanggal_Pinjam</td>
 						<td>:</td>
-						<td><input type="text" name="tanggal_pinjam" placeholder="tanggal_pinjam"></td>
+						<td><input type="date" name="tanggal_pinjam" placeholder="tanggal_pinjam"></td>
 					</tr>	
 					<tr>
 						<td>Tanggal_Kembali</td>
 						<td>:</td>
-						<td><input type="text" name="tanggal_Kembali" placeholder="tanggal_kembali"></td>
+						<td><input type="date" name="tanggal_Kembali" placeholder="tanggal_kembali"></td>
 					</tr>	
 					<tr>
 						<td></td>

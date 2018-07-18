@@ -13,7 +13,7 @@
 			<ul>
 				<li><a href="../anggota/anggota.php">Anggota</a></li>
 				<li><a href="../buku/buku.php">Buku</a></li>
-				<li><a href="../kategori/kategoti.php">Kategori</a></li>
+				<li><a href="../kategori/kategori.php">Kategori</a></li>
 				<li><a href="../peminjaman/peminjaman.php">Peminjaman</a></li>
 				<li><a href="../penerbit/penerbit.php">Penerbit</a></li>
 				<li><a href="../penulis/penulis.php">Penulis</a></li>
@@ -56,8 +56,8 @@
 				<td><?php echo $d['id_penerbit']; ?></td>
 				<td><?php echo $d['id_kategori']; ?></td>
 				<td><?php echo $d['sinopsis']; ?></td>
-				<td><?php echo $d['sampul']; ?></td>
-				<td><?php echo $d['berkas']; ?></td>
+				<td><img src="image/<?php echo $d['sampul']; ?>" width="100" height="100" /></td>
+				<td><a href="download.php?id=<?php echo $d['berkas'] ?>">Download Berkas</a></td>
 				<td>
 					<a href="edit_buku.php?id=<?php echo $d['id']; ?>">EDIT</a>
 					<a href="hapus_buku.php?id=<?php echo $d['id']; ?>">HAPUS</a>
