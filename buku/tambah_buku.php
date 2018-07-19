@@ -23,7 +23,7 @@
 				</ul>
 			</td>
 			<td width="500">
-				<form method="post" action="aksi_buku.php">
+				<form method="post" action="aksi_buku.php enctype="multipart/form-data">
 					<table border="0">
 						<tr>
 							<td>Nama</td>
@@ -36,37 +36,99 @@
 						<tr>
 							<td>Tahun Terbit</td>
 							<td></td>
-							<td><input type="year" name="tahun_terbit" placeholder="tahun terbit"></td>
+							<td><input type="year"  style="width: 200px name="tahun_terbit" placeholder="tahun terbit"></td>
 						</tr>
+						</tr>
+
+
 						<tr>
-							<td>Penulis</td>
-							<td></td>
-							<td><int type="int" name="id_penulis" placeholder="penulis"></td>
+							<td>Penulis </td>
+							<td>:</td>
+							<td >
+								<?php
+								include '../koneksi.php';
+								$read_penulis = mysqli_query($koneksi, "SELECT * FROM penulis");?>
+								<select name="penulis"  style="width: 160px ">
+									<option>Pilih penulis</option>
+								<?php
+								if ($read_penulis->num_rows> 0 )
+								{
+									while ($data = $read_penulis->fetch_assoc())
+									{
+										?>
+										<option value="<?=$data['id'];?>"><?=$data['nama'];?></option>
+										<?php
+									}
+								}
+								?>
+							</td>
+								</select>
 						</tr>
+
+
 						<tr>
-							<td>Penerbit</td>
-								<td></td>
-								<td><int type="int" name="id_penerbit" placeholder="penerbit"></td>
+							<td> Penerbit </td>
+							<td>:</td>
+							<td>
+								<?php
+								include '../koneksi.php';
+								$read_penerbit = mysqli_query($koneksi, "SELECT * FROM penerbit");?>
+								<select name="penerbit"  style="width: 160px">
+									<option>Pilih penebit</option>
+								<?php
+								if ($read_penulis->num_rows> 0 )
+								{
+									while ($data = $read_penerbit->fetch_assoc())
+									{
+										?>
+										<option value="<?=$data['id'];?>"><?=$data['nama'];?></option>
+										<?php
+									}
+								}
+								?>
+							</td>
+								</select>
 						</tr>
+						
+
 						<tr>
-							<td>Kategori</td>
-									<td></td>
-									<td><input type="int" name="id_kategori" placeholder="kategori"></td>
+							<td>Kategori </td>
+							<td>:</td>
+							<td>
+								<?php
+								include '../koneksi.php';
+								$read_penulis = mysqli_query($koneksi, "SELECT * FROM kategori");?>
+								<select name="kategori" style="width: 160px">
+									<option>Pilih kategori</option>
+								<?php
+								if ($read_kategori->num_rows> 0 )
+								{
+									while ($data = $read_kategori->fetch_assoc())
+									{
+										?>
+										<option value="<?=$data['id'];?>"><?=$data['nama'];?></option>
+										<?php
+									}
+								}
+								?>
+							</td>
+								</select>
 						</tr>
+
 						<tr>
 							<td>Sinopsis</td>
 							<td></td>
-							<td><input type="text" name="sinopsis" placeholder="sinopsis"></td>
+							<td><input "texarea" name="sinopsis" placeholder="sinopsis"></td>
 						</tr>
 						<tr>
 							<td>Sampul</td>
 							<td></td>
-							<td><input type="varchar" name="sampul" placeholder="sampul"></td>
-						</tr>
+							<td><input type="file" name="sampul" placeholder="sampul"></td>
+						
 						<tr>
 							<td>Berkas</td>
 							<td></td>
-							<td><input type="varchar" name="berkas" placeholder="berkas"></td>
+							<td><input type="file" name="berkas" placeholder="berkas"></td>
 						</tr>
 						<tr>
 							<td></td>

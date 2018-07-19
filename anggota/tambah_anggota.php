@@ -27,27 +27,27 @@
 					<tr>
 						<td>Nama</td>
 						<td>:</td>
-						<td><input type="varchar" name="nama" placeholder="nama"></td>
+						<td><input type="text" name="nama" placeholder="nama"></td>
 					</tr>
 					<tr>
 						<td>Alamat</td>
 						<td>:</td>
-						<td><input type="varchar" name="alamat" placeholder="alamat"></td>
+						<td><input type="text" name="alamat" placeholder="alamat"></td>
 					</tr>	
 					<tr>
 						<td>Telepon</td>
 						<td>:</td>
-						<td><input type="varchar" name="telepon" placeholder="telepon"></td>
+						<td><input type="text" name="telepon" placeholder="telepon"></td>
 					</tr>	
 					<tr>
 						<td>Email</td>
 						<td>:</td>
-						<td><input type="varchar" name="email" placeholder="email"></td>
+						<td><input type="email" name="email" placeholder="email"></td>
 					</tr>	
 					<tr>
 						<td>Status Aktif</td>
 						<td>:</td>
-						<td><input type="int" name="status_aktif">
+						<td><input type="hidden" name="status_aktif">
 						 </td>
 					</tr>
 					<tr>

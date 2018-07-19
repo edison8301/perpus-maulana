@@ -37,30 +37,31 @@
 					<td>Nama</td>
 					<td>
 						<input type="hidden" name="id" value="<?php echo $d['id']; ?>">
-						<input type="varcar" name="nama" value="<?php echo $d['nama']; ?>">
+						<input type="text" name="nama" value="<?php echo $d['nama']; ?>">
 					</td>
 				</tr>
 				<tr>
 					<td>Alamat</td>
-					<td><input type="varcar" name="alamat" value="<?php echo $d['alamat']; ?>"></td>
+					<td><input type="text" name="alamat" value="<?php echo $d['alamat']; ?>"></td>
 				</tr>
 				<tr>
 					<td>Telepon</td>
-					<td><input type="varcar" name="telepon" value="<?php echo $d['telepon']; ?>"></td>
+					<td><input type="text" name="telepon" value="<?php echo $d['telepon']; ?>"></td>
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="varcar" name="email" value="<?php echo $d['email']; ?>"></td>
+					<td><input type="email" name="email" value="<?php echo $d['email']; ?>"></td>
 				</tr>
 				<tr>
 					<td>Status_Aktif</td>
-					<td><input type="int" name="status_aktif" value="<?php echo $d['status_aktif']; ?>"></td>
+					<td><input type="hidden" name="status_aktif" value="<?php echo $d['status_aktif']; ?>"></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td><input type="submit" value="SIMPAN"></td>
 				</tr>		
-			</table></form><?php }?>
+			</table>
+			</form><?php }?>
 		</table>
 	</form>
 </td>

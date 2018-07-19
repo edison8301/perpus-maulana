@@ -24,11 +24,27 @@
 			<td width="500">
 				<form method="post" action="aksi_peminjaman.php">
 					<table border="0">
-						<tr>
-							<td>Buku</td>
-						<td>:</td>
-						<td><input type="int" name="id_buku" placeholder="id_buku"></td>
-					</tr>
+
+
+						<div class="form-group">
+                <?php
+                include '../koneksi.php';
+                $data = mysqli_query($koneksi, "SELECT * FROM buku");
+
+                echo "<div class='form-group'>
+                <h5 class='col-sm-4 control-label'>Pilih Buku</h5>
+                <div class='col-md-4'>
+                <select class='selectpicker form-control' name='id_buku' required='' style='width:100%'>
+                <option value='Pilih Buku' selected=''>Nama Buku</option>";
+                while ($row = mysqli_fetch_array($data)) { echo "<option value='$row[id]' selected=''>$row[nama]</option>";
+              }
+              echo "</select>
+              </div>
+              </div>";
+              ?>
+            </div>
+
+            
 					<tr>
 						<td>Anggota</td>
 						<td>:</td>
