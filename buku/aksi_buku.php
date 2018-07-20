@@ -9,20 +9,38 @@ include '../koneksi.php';
 	$id_penerbit = $_POST['id_penerbit'];
 	$id_kategori = $_POST['id_kategori'];
 	$sinopsis = $_POST['sinopsis'];
-	$sampul = $_POST['sampul'];
-	$berkas = $_POST['berkas'];
+ //$berkas = $_POST['berkas']; -->
+	$target_sampul = "imamge/";
+	$targer_berkas = "document/";
+//upload file berkas -->
+$namaBerkas = $_FILES['berkas']['name'];
+$namaBerkasSementara = $_FILES['berkas']['tmp_name'];
+ // upload file sampul -->
+$namaSampul = $_FILES['sampul']['name'];
+$namaSementara = $_FILES['sampul']['tmp_name']; 
+ // Check if image file is a actual image or fake  -->
+    // echo $nama;
+    // echo $tahun_terbit;
+    // echo $sinopsis;
+    // echo $kategori;
+    // exit();
 
 // menginput data ke database
-	mysqli_query($koneksi,"insert into buku values('',$nama','$tahun_terbit','$id_penulis','$id_penerbit','$id_kategori','$sinopsis','$sampul','$berkas')");
+    $uploadBerkas = move_uploaded_file($namaBerkasSementara, $target_berkas.$namaBerkas);
+    $uploadSampul = move_uploaded_file($namaSementara, $target_sampul.$namaSampul);
+     if($uploadBerkas && $uploadSampul){
+	$input = mysqli_query($koneksi,"insert into buku (id, nama, tahun_terbit, id_penulis, id_penerbit, id_kategori, sinopsis, sampul, berkas) values('',$nama','$tahun_terbit','$id_penulis','$id_penerbit','$id_kategori','$sinopsis','$sampul','$berkas')");
 	
+
+	if($input){
 // mengalihkan halaman kembali ke index.php
 	header("location:buku.php");
-
-	if ($query) {
-	echo "<script>alert('Data Berhasil di Simpan');
-	document.location.href='buku.php'</script>\n";
-} else {
-	echo "<script>alert('Data Gagal di Simpan');
-	document.location.href='tambah_buku.php'</script>\n";
+}else{
+			echo mysqli_error($koneksi);
+		}
+		else{
+    	echo "berkas". $_FILES['berkas']['error'];
+    	echo "sampul". $_FILES['sampul']['error'];
+    }
 }
 ?>

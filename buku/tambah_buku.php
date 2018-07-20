@@ -123,12 +123,12 @@
 						<tr>
 							<td>Sampul</td>
 							<td></td>
-							<td><input type="file" name="sampul" placeholder="sampul"></td>
+							<td><input type="file" name="sampul"  class="inputfile" placeholder="sampul"></td>
 						
 						<tr>
 							<td>Berkas</td>
 							<td></td>
-							<td><input type="file" name="berkas" placeholder="berkas"></td>
+							<td><input type="file" name="berkas" class="inputfile" placeholder="berkas"></td>
 						</tr>
 						<tr>
 							<td></td>

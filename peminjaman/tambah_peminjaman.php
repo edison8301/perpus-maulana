@@ -25,45 +25,66 @@
 				<form method="post" action="aksi_peminjaman.php">
 					<table border="0">
 
-
-						<div class="form-group">
-                <?php
-                include '../koneksi.php';
-                $data = mysqli_query($koneksi, "SELECT * FROM buku");
-
-                echo "<div class='form-group'>
-                <h5 class='col-sm-4 control-label'>Pilih Buku</h5>
-                <div class='col-md-4'>
-                <select class='selectpicker form-control' name='id_buku' required='' style='width:100%'>
-                <option value='Pilih Buku' selected=''>Nama Buku</option>";
-                while ($row = mysqli_fetch_array($data)) { echo "<option value='$row[id]' selected=''>$row[nama]</option>";
-              }
-              echo "</select>
-              </div>
-              </div>";
-              ?>
-            </div>
-
-            
-					<tr>
-						<td>Anggota</td>
-						<td>:</td>
-						<td><input type="int" name="id_anggota" placeholder="id_anggota"></td>
-					</tr>	
-					<tr>
-						<td>Tanggal_Pinjam</td>
-						<td>:</td>
-						<td><input type="date" name="tanggal_pinjam" placeholder="tanggal_pinjam"></td>
-					</tr>	
-					<tr>
-						<td>Tanggal_Kembali</td>
-						<td>:</td>
-						<td><input type="date" name="tanggal_Kembali" placeholder="tanggal_kembali"></td>
-					</tr>	
-					<tr>
-						<td></td>
-						<td></td>
-						<td><input type="submit" name="simpan" value="simpan"></td>
+						<tr>
+							<td>Buku </td>
+							<td>:</td>
+							<td >
+								<?php
+								include '../koneksi.php';
+								$read_penulis = mysqli_query($koneksi, "SELECT * FROM buku");?>
+								<select name="buku"  style="width: 160px ">
+									<option>Pilih Buku</option>
+								<?php
+								if ($read_buku->num_rows> 0 )
+								{
+									while ($data = $read_buku->fetch_assoc())
+									{
+										?>
+										<option value="<?=$data['id'];?>"><?=$data['nama'];?></option>
+										<?php
+									}
+								}
+								?>
+							</td>
+								</select>
+						</tr>
+						<tr>
+							<td>Anggota </td>
+							<td>:</td>
+							<td >
+								<?php
+								include '../koneksi.php';
+								$read_anggota = mysqli_query($koneksi, "SELECT * FROM penulis");?>
+								<select name="penulis"  style="width: 160px ">
+									<option>Pilih Anggota</option>
+								<?php
+								if ($read_anggota->num_rows> 0 )
+								{
+									while ($data = $read_anggota->fetch_assoc())
+									{
+										?>
+										<option value="<?=$data['id'];?>"><?=$data['nama'];?></option>
+										<?php
+									}
+								}
+								?>
+							</td>
+								</select>
+						</tr>
+						<tr>
+							<td>Tanggal_Pinjam</td>
+							<td>:</td>
+							<td><input type="date" name="tanggal_pinjam" placeholder="tanggal_pinjam"></td>
+						</tr>
+						<tr>
+							<td>Tanggal_Kembali</td>
+							<td>:</td>
+							<td><input type="date" name="tanggal_Kembali" placeholder="tanggal_kembali"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td><input type="submit" name="simpan" value="simpan"></td>
 						</tr>
 					</table>
 				</form>
