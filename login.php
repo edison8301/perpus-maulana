@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Membuat Login Dengan PHP dan MySQL | MalasNgoding.com</title>  
 </head>
 <body>
-  <h1>Membuat Login Dengan PHP dan MySQL | MalasNgoding.com</h1>
-  <h3>Halaman Login Sederhana</h3>
+  <h3>Halaman Login </h3>
   <form action="login.php" method="post">   
     <table>
       <tr>

@@ -31,7 +31,7 @@
 							<td >
 								<?php
 								include '../koneksi.php';
-								$read_penulis = mysqli_query($koneksi, "SELECT * FROM buku");?>
+								$read_buku = mysqli_query($koneksi, "SELECT * FROM buku");?>
 								<select name="buku"  style="width: 160px ">
 									<option>Pilih Buku</option>
 								<?php
@@ -54,7 +54,7 @@
 							<td >
 								<?php
 								include '../koneksi.php';
-								$read_anggota = mysqli_query($koneksi, "SELECT * FROM penulis");?>
+								$read_anggota = mysqli_query($koneksi, "SELECT * FROM anggota");?>
 								<select name="penulis"  style="width: 160px ">
 									<option>Pilih Anggota</option>
 								<?php

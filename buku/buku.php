@@ -11,6 +11,7 @@
 	<tr>
 		<td width="200">
 			<ul>
+				<li><a href="../index.php">Halaman Awal</a></li>
 				<li><a href="../anggota/anggota.php">Anggota</a></li>
 				<li><a href="../buku/buku.php">Buku</a></li>
 				<li><a href="../kategori/kategori.php">Kategori</a></li>

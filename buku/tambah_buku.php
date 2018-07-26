@@ -35,7 +35,7 @@
 						</tr>
 						<tr>
 							<td>Tahun Terbit</td>
-							<td></td>
+							<td>:</td>
 							<td><input type="year"  style="width: 200px name="tahun_terbit" placeholder="tahun terbit"></td>
 						</tr>
 						</tr>
@@ -49,7 +49,7 @@
 								include '../koneksi.php';
 								$read_penulis = mysqli_query($koneksi, "SELECT * FROM penulis");?>
 								<select name="penulis"  style="width: 160px ">
-									<option>Pilih penulis</option>
+									<option>Pilih Penulis</option>
 								<?php
 								if ($read_penulis->num_rows> 0 )
 								{
@@ -74,7 +74,7 @@
 								include '../koneksi.php';
 								$read_penerbit = mysqli_query($koneksi, "SELECT * FROM penerbit");?>
 								<select name="penerbit"  style="width: 160px">
-									<option>Pilih penebit</option>
+									<option>Pilih Penebit</option>
 								<?php
 								if ($read_penulis->num_rows> 0 )
 								{
@@ -97,9 +97,9 @@
 							<td>
 								<?php
 								include '../koneksi.php';
-								$read_penulis = mysqli_query($koneksi, "SELECT * FROM kategori");?>
+								$read_kategori = mysqli_query($koneksi, "SELECT * FROM kategori");?>
 								<select name="kategori" style="width: 160px">
-									<option>Pilih kategori</option>
+									<option>Pilih Kategori</option>
 								<?php
 								if ($read_kategori->num_rows> 0 )
 								{
@@ -117,17 +117,17 @@
 
 						<tr>
 							<td>Sinopsis</td>
-							<td></td>
+							<td>:</td>
 							<td><input "texarea" name="sinopsis" placeholder="sinopsis"></td>
 						</tr>
 						<tr>
 							<td>Sampul</td>
-							<td></td>
+							<td>:</td>
 							<td><input type="file" name="sampul"  class="inputfile" placeholder="sampul"></td>
 						
 						<tr>
 							<td>Berkas</td>
-							<td></td>
+							<td>:</td>
 							<td><input type="file" name="berkas" class="inputfile" placeholder="berkas"></td>
 						</tr>
 						<tr>

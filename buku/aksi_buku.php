@@ -10,8 +10,8 @@ include '../koneksi.php';
 	$id_kategori = $_POST['id_kategori'];
 	$sinopsis = $_POST['sinopsis'];
  //$berkas = $_POST['berkas']; -->
-	$target_sampul = "imamge/";
-	$targer_berkas = "document/";
+	$target_sampul = "image/";
+	$targer_berkas = "documents/";
 //upload file berkas -->
 $namaBerkas = $_FILES['berkas']['name'];
 $namaBerkasSementara = $_FILES['berkas']['tmp_name'];
@@ -38,9 +38,8 @@ $namaSementara = $_FILES['sampul']['tmp_name'];
 }else{
 			echo mysqli_error($koneksi);
 		}
-		else{
+		}else{
     	echo "berkas". $_FILES['berkas']['error'];
     	echo "sampul". $_FILES['sampul']['error'];
     }
-}
 ?>
